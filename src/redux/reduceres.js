@@ -16,8 +16,12 @@ const initialState = {
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_TODO':
-            const newTodos = [...state.todos, action.payload];
+            const newTodo = action.payload
+            const newTodos = [...state.todos, newTodo];
+            console.log('Adding Todo', newTodo);
+            console.log("New todos List", newTodos);
             localStorage.setItem('todos', JSON.stringify(newTodos));
+            console.log('Saved todo in local storage', localStorage.getItem('todos'));
             return { ...state, todos: newTodos };
 
         case 'UPDATE_TODO':

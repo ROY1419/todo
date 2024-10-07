@@ -6,8 +6,8 @@ import { TextField } from '@mui/material';
 const Search = () => {
     const dispatch = useDispatch();
 
-    const handleSearch = (e) => {
-        dispatch(setSearchTerm(e.target.value));
+    const handleSearch = (event) => {
+        dispatch(setSearchTerm(event.target.value));
     };
 
     return (

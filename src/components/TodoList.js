@@ -11,8 +11,8 @@ const TodoList = () => {
         todo.text.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const handleUpdate = (id, text) => {
-        dispatch(updateTodo(id, text));
+    const handleUpdate = (id, updatedText) => {
+        dispatch(updateTodo(id, updatedText));
     };
 
     return (
