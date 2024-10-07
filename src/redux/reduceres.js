@@ -1,5 +1,15 @@
+const LocalTodosFormLocalStorage = () => {
+    try {
+        const savedTodos = JSON.parse(localStorage.getItem('todo'));
+        return Array.isArray(savedTodos) ? savedTodos : [];
+    } catch (error) {
+        console.error('Error loading tasks from local storage', error);
+        return [];
+    }
+}
+
 const initialState = {
-    todos: JSON.parse(localStorage.getItem('todos')) || [],
+    todos: LocalTodosFormLocalStorage(),
     searchTerm: '',
 };
 
