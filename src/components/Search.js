@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setSearchTerm } from '../redux/actions';
-import { TextField } from '@mui/material';
+import  {TextField } from '@mui/material';
 
 const Search = () => {
     const dispatch = useDispatch();
